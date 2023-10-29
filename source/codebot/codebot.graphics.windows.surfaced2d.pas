@@ -2253,7 +2253,7 @@ begin
   Path.Add;
   FontObj := Font as TFontD2D;
   { It's hard to tell if CreateGdiTextLayout makes any difference }
-  Layout := CreateGdiTextLayout(FontObj.Format, Text, Rect.Width, Rect.Height);
+  Layout := CreateTextLayout(FontObj.Format, Text, Rect.Width, Rect.Height);
   if Direction in [drLeft..drCenter] then
     Layout.SetWordWrapping(DWRITE_WORD_WRAPPING_NO_WRAP)
   else
