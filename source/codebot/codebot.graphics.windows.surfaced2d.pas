@@ -2288,8 +2288,12 @@ begin
     Layout.SetStrikethrough(True, Range);
   if fsUnderline in FontObj.Style then
     Layout.SetUnderline(True, Range);
+
+  //ToDo: On/Off EndEllipsis
   WriteFactory.CreateEllipsisTrimmingSign(Layout, Ellipse);
   Layout.SetTrimming(TrimChar, Ellipse);
+  //
+  
   WriteFactory.CreateRenderingParams(Params1);
   WriteFactory.CreateCustomRenderingParams(Params1.GetGamma,
     Params1.GetEnhancedContrast, 1, Params1.GetPixelGeometry,
